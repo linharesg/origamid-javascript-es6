@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    [data-cor-tela] {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black
+    }
+    [data-cor-tela="blue"] {
+      background-color: blue;
+    }
+
+    [data-cor-tela="red"] {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div data-cor-tela="blue"></div>
+  <button data-timer="start">start</button>
+  <button data-timer="pause">pause / stop</button>
+  <span data-timer="display" data-timer-status="paused">0</span>
+  <script src="script.js"></script>
+</body>
+</html>
