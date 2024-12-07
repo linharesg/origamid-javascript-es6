@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>viacep</title>
+  <style>
+    [data-form="address"] {
+      label {
+        display: block;
+      }
+      input {
+        margin-bottom: .5rem;
+      }
+    }
+    .piada.waiting {
+      color: transparent;
+      text-shadow: 0 0 3px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+<form action="post" data-form="address" name="address">
+  <label for="cep">CEP</label>
+  <input type="text" name="cep" pattern="^\d{5}-?\d{3}$" maxlength="9" id="cep">
+  <label for="logradouro">logradouro</label>
+  <input type="text" name="logradouro" id="logradouro" disabled>
+  <label for="complemento">complemento</label>
+  <input type="text" name="complemento" id="complemento" disabled>
+  <label for="bairro">bairro</label>
+  <input type="text" name="bairro" id="bairro" disabled>
+  <label for="localidade">localidade</label>
+  <input type="text" name="localidade" id="localidade" disabled>
+  <label for="estado">estado</label>
+  <input type="text" name="estado" id="estado" disabled>
+  <label for="ddd">ddd</label>
+  <input type="text" name="ddd" id="ddd" disabled>
+</form>
+  <section data-blockchain="container">
+    <span>valor em reais</span>
+    <span data-bitcoin="valueBrl"></span>
+  </section>
+  <section class="chucknorris">
+    <button class="proxima">Próxima</button>
+    <div class="piada"></div>
+  </section>
+<script src="cep.js"></script>
+<script src="blockchain.js"></script>
+<script src="chucknorris.js"></script>
+</body>
+</html>
